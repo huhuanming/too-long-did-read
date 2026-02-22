@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageToggle from '../../components/LanguageToggle.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formattedDate = post.data.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={post.data.titleEn}>
+  <article>
+    <header class="mb-8">
+      <time class="text-sm text-neutral-400 dark:text-neutral-500">{formattedDate}</time>
+      <h1 class="mt-2 text-2xl font-semibold tracking-tight leading-tight">
+        {post.data.titleEn}
+      </h1>
+      <p class="mt-1 text-xl text-neutral-500 dark:text-neutral-400 leading-tight">
+        {post.data.titleZh}
+      </p>
+      <a
+        href={post.data.originalUrl}
+        class="inline-block mt-3 text-sm text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Original article on anthropic.com &rarr;
+      </a>
+    </header>
+
+    <div class="mb-8 sticky top-4 z-10">
+      <LanguageToggle />
+    </div>
+
+    <div
+      id="article-content"
+      class="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-h2:text-xl prose-h3:text-lg prose-p:leading-relaxed prose-li:leading-relaxed"
+    >
+      <Content />
+    </div>
+  </article>
+
+  <div class="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800">
+    <a
+      href="/"
+      class="text-sm text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+    >
+      &larr; All posts
+    </a>
+  </div>
+</BaseLayout>
+
+<script>
+  function splitContent() {
+    const prose = document.getElementById('article-content');
+    if (!prose) return;
+
+    const children = Array.from(prose.children);
+    const enWrapper = document.createElement('div');
+    enWrapper.id = 'content-en';
+    const zhWrapper = document.createElement('div');
+    zhWrapper.id = 'content-zh';
+
+    let current = enWrapper;
+
+    for (const child of children) {
+      const text = child.textContent?.trim() || '';
+
+      if (child.tagName === 'H2' && text === 'English') {
+        current = enWrapper;
+        continue;
+      }
+      if (child.tagName === 'H2' && text.includes('中文翻译')) {
+        current = zhWrapper;
+        continue;
+      }
+      // Skip HR dividers between sections
+      if (child.tagName === 'HR') {
+        continue;
+      }
+
+      current.appendChild(child);
+    }
+
+    prose.innerHTML = '';
+    prose.appendChild(enWrapper);
+    prose.appendChild(zhWrapper);
+
+    // Signal that splitting is done so LanguageToggle can initialize
+    document.dispatchEvent(new Event('content-split-done'));
+  }
+
+  // Run on initial load
+  splitContent();
+
+  // Also handle Astro view transitions
+  document.addEventListener('astro:after-swap', splitContent);
+</script>

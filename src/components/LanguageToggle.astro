@@ -1,0 +1,44 @@
+---
+---
+
+<div id="lang-toggle" class="inline-flex gap-0 text-sm border border-neutral-200 dark:border-neutral-700 rounded-md overflow-hidden">
+  <button data-lang="en" class="px-3 py-1 transition-colors">EN</button>
+  <button data-lang="zh" class="px-3 py-1 transition-colors">中文</button>
+  <button data-lang="both" class="px-3 py-1 transition-colors">Both</button>
+</div>
+
+<script>
+  function initLangToggle() {
+    const buttons = document.querySelectorAll('#lang-toggle button');
+    const enSection = document.getElementById('content-en');
+    const zhSection = document.getElementById('content-zh');
+
+    function setLang(lang: string) {
+      buttons.forEach((btn) => {
+        const isActive = (btn as HTMLElement).dataset.lang === lang;
+        btn.classList.toggle('bg-neutral-900', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('dark:bg-neutral-100', isActive);
+        btn.classList.toggle('dark:text-neutral-900', isActive);
+        btn.classList.toggle('text-neutral-500', !isActive);
+      });
+
+      if (enSection && zhSection) {
+        enSection.style.display = lang === 'zh' ? 'none' : '';
+        zhSection.style.display = lang === 'en' ? 'none' : '';
+      }
+
+      localStorage.setItem('preferred-lang', lang);
+    }
+
+    const stored = localStorage.getItem('preferred-lang') || 'en';
+    setLang(stored);
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => setLang((btn as HTMLElement).dataset.lang || 'en'));
+    });
+  }
+
+  // Run after DOM content splitting has happened
+  document.addEventListener('content-split-done', initLangToggle);
+</script>
