@@ -1,20 +1,18 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
 ---
 
-<header class="w-full max-w-2xl mx-auto px-6 pt-12 pb-4">
-  <nav class="flex items-center justify-between">
-    <a href="/" class="text-lg font-medium tracking-tight hover:opacity-70 transition-opacity">
-      too long; did read
+<header class="sticky top-0 z-50 glass">
+  <nav class="w-full max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="font-semibold tracking-tight hover:opacity-80 transition-opacity">
+      <span class="gradient-text">tl;dr</span>
     </a>
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-6">
       <a
         href="/about"
-        class="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
+        class="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
       >
         About
       </a>
-      <ThemeToggle />
     </div>
   </nav>
 </header>

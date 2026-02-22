@@ -17,33 +17,37 @@ export default {
           'sans-serif',
         ],
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: '65ch',
-            color: '#1a1a1a',
-            a: {
-              color: '#1a1a1a',
-              textDecoration: 'underline',
-              textUnderlineOffset: '3px',
-            },
-          },
+      colors: {
+        surface: {
+          0: '#09090b',
+          1: '#111113',
+          2: '#18181b',
+          3: '#1f1f23',
+          4: '#27272a',
         },
+      },
+      typography: {
         invert: {
           css: {
-            color: '#e5e5e5',
-            a: { color: '#e5e5e5' },
-            h1: { color: '#f5f5f5' },
-            h2: { color: '#f5f5f5' },
-            h3: { color: '#f5f5f5' },
-            strong: { color: '#f5f5f5' },
-            blockquote: { color: '#d4d4d4', borderLeftColor: '#525252' },
-            hr: { borderColor: '#404040' },
-            'ol > li::marker': { color: '#a3a3a3' },
-            'ul > li::marker': { color: '#a3a3a3' },
-            code: { color: '#f5f5f5' },
-            thead: { borderBottomColor: '#525252' },
-            'tbody tr': { borderBottomColor: '#404040' },
+            '--tw-prose-body': '#a1a1aa',
+            '--tw-prose-headings': '#fafafa',
+            '--tw-prose-links': '#a78bfa',
+            '--tw-prose-bold': '#e4e4e7',
+            '--tw-prose-quotes': '#a1a1aa',
+            '--tw-prose-quote-borders': '#3f3f46',
+            '--tw-prose-counters': '#71717a',
+            '--tw-prose-bullets': '#52525b',
+            '--tw-prose-hr': '#27272a',
+            '--tw-prose-th-borders': '#3f3f46',
+            '--tw-prose-td-borders': '#27272a',
+            '--tw-prose-code': '#e4e4e7',
+            a: {
+              color: '#a78bfa',
+              textDecoration: 'none',
+              '&:hover': {
+                color: '#c4b5fd',
+              },
+            },
           },
         },
       },

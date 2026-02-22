@@ -1,10 +1,10 @@
 ---
 ---
 
-<div id="lang-toggle" class="inline-flex gap-0 text-sm border border-neutral-200 dark:border-neutral-700 rounded-md overflow-hidden">
-  <button data-lang="en" class="px-3 py-1 transition-colors">EN</button>
-  <button data-lang="zh" class="px-3 py-1 transition-colors">中文</button>
-  <button data-lang="both" class="px-3 py-1 transition-colors">Both</button>
+<div id="lang-toggle" class="inline-flex text-sm rounded-lg overflow-hidden border border-zinc-800 bg-surface-2">
+  <button data-lang="en" class="px-3 py-1.5 transition-all">EN</button>
+  <button data-lang="zh" class="px-3 py-1.5 transition-all">中文</button>
+  <button data-lang="both" class="px-3 py-1.5 transition-all">Both</button>
 </div>
 
 <script>
@@ -15,12 +15,13 @@
 
     function setLang(lang: string) {
       buttons.forEach((btn) => {
-        const isActive = (btn as HTMLElement).dataset.lang === lang;
-        btn.classList.toggle('bg-neutral-900', isActive);
-        btn.classList.toggle('text-white', isActive);
-        btn.classList.toggle('dark:bg-neutral-100', isActive);
-        btn.classList.toggle('dark:text-neutral-900', isActive);
-        btn.classList.toggle('text-neutral-500', !isActive);
+        const el = btn as HTMLElement;
+        const isActive = el.dataset.lang === lang;
+        if (isActive) {
+          el.className = 'px-3 py-1.5 transition-all bg-violet-600 text-white text-sm font-medium';
+        } else {
+          el.className = 'px-3 py-1.5 transition-all text-zinc-400 hover:text-zinc-200 text-sm';
+        }
       });
 
       if (enSection && zhSection) {
@@ -39,6 +40,5 @@
     });
   }
 
-  // Run after DOM content splitting has happened
   document.addEventListener('content-split-done', initLangToggle);
 </script>

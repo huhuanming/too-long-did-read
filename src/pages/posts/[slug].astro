@@ -23,42 +23,57 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
 
 <BaseLayout title={post.data.titleEn}>
   <article>
-    <header class="mb-8">
-      <time class="text-sm text-neutral-400 dark:text-neutral-500">{formattedDate}</time>
-      <h1 class="mt-2 text-2xl font-semibold tracking-tight leading-tight">
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <time class="text-sm text-zinc-500 tabular-nums">{formattedDate}</time>
+        <span class="text-zinc-700">|</span>
+        <a
+          href={post.data.originalUrl}
+          class="text-sm text-violet-400 hover:text-violet-300 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Original &rarr;
+        </a>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100 leading-tight">
         {post.data.titleEn}
       </h1>
-      <p class="mt-1 text-xl text-neutral-500 dark:text-neutral-400 leading-tight">
+      <p class="mt-2 text-lg sm:text-xl text-zinc-500 leading-tight">
         {post.data.titleZh}
       </p>
-      <a
-        href={post.data.originalUrl}
-        class="inline-block mt-3 text-sm text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Original article on anthropic.com &rarr;
-      </a>
     </header>
 
-    <div class="mb-8 sticky top-4 z-10">
+    <div class="mb-8 sticky top-14 z-10 py-3 bg-surface-0/90 backdrop-blur-md">
       <LanguageToggle />
     </div>
 
     <div
       id="article-content"
-      class="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-h2:text-xl prose-h3:text-lg prose-p:leading-relaxed prose-li:leading-relaxed"
+      class="prose prose-invert max-w-none
+             prose-headings:font-semibold prose-headings:tracking-tight
+             prose-h2:text-xl prose-h2:text-zinc-100
+             prose-h3:text-lg prose-h3:text-zinc-200
+             prose-p:leading-relaxed prose-p:text-zinc-400
+             prose-li:leading-relaxed prose-li:text-zinc-400
+             prose-strong:text-zinc-200
+             prose-a:text-violet-400 prose-a:no-underline hover:prose-a:text-violet-300
+             prose-blockquote:border-l-violet-500/30 prose-blockquote:text-zinc-500
+             prose-hr:border-zinc-800"
     >
       <Content />
     </div>
   </article>
 
-  <div class="mt-16 pt-8 border-t border-neutral-100 dark:border-neutral-800">
+  <div class="mt-16 pt-8 border-t border-zinc-800">
     <a
       href="/"
-      class="text-sm text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+      class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-violet-400 transition-colors"
     >
-      &larr; All posts
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      All posts
     </a>
   </div>
 </BaseLayout>
@@ -87,7 +102,6 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
         current = zhWrapper;
         continue;
       }
-      // Skip HR dividers between sections
       if (child.tagName === 'HR') {
         continue;
       }
@@ -99,13 +113,9 @@ const formattedDate = post.data.date.toLocaleDateString('en-US', {
     prose.appendChild(enWrapper);
     prose.appendChild(zhWrapper);
 
-    // Signal that splitting is done so LanguageToggle can initialize
     document.dispatchEvent(new Event('content-split-done'));
   }
 
-  // Run on initial load
   splitContent();
-
-  // Also handle Astro view transitions
   document.addEventListener('astro:after-swap', splitContent);
 </script>

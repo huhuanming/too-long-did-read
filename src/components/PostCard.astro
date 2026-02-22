@@ -15,16 +15,20 @@ const formattedDate = date.toLocaleDateString('en-US', {
 });
 ---
 
-<article class="group py-4">
-  <a href={`/posts/${slug}`} class="block">
-    <time class="text-sm text-neutral-400 dark:text-neutral-500 tabular-nums">
-      {formattedDate}
-    </time>
-    <h2 class="mt-1 text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:opacity-70 transition-opacity leading-snug">
-      {titleEn}
-    </h2>
-    <p class="mt-0.5 text-base text-neutral-500 dark:text-neutral-400 leading-snug">
-      {titleZh}
-    </p>
+<article class="group">
+  <a href={`/posts/${slug}`} class="block p-4 -mx-4 rounded-xl glow-border transition-all">
+    <div class="flex items-start justify-between gap-4">
+      <div class="min-w-0">
+        <h2 class="text-base font-medium text-zinc-100 group-hover:text-violet-300 transition-colors leading-snug truncate">
+          {titleEn}
+        </h2>
+        <p class="mt-1 text-sm text-zinc-500 leading-snug truncate">
+          {titleZh}
+        </p>
+      </div>
+      <time class="text-xs text-zinc-600 tabular-nums whitespace-nowrap pt-1">
+        {formattedDate}
+      </time>
+    </div>
   </a>
 </article>
