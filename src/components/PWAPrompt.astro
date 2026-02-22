@@ -1,0 +1,37 @@
+<!-- PWA Update Prompt: shown when a new version is available -->
+<div id="pwa-toast" class="hidden fixed bottom-4 right-4 z-50 max-w-sm">
+  <div class="bg-zinc-900 border border-zinc-700 rounded-lg p-4 shadow-lg">
+    <p class="text-sm text-zinc-300 mb-3">New version available. Reload to update?</p>
+    <div class="flex gap-2 justify-end">
+      <button id="pwa-dismiss" class="text-xs text-zinc-500 hover:text-zinc-300 px-3 py-1.5 transition-colors">
+        Dismiss
+      </button>
+      <button id="pwa-reload" class="text-xs bg-violet-600 hover:bg-violet-500 text-white px-3 py-1.5 rounded transition-colors">
+        Reload
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { registerSW } from 'virtual:pwa-register';
+
+  const updateSW = registerSW({
+    onNeedRefresh() {
+      const toast = document.getElementById('pwa-toast');
+      if (toast) toast.classList.remove('hidden');
+    },
+    onOfflineReady() {
+      console.log('App ready to work offline');
+    },
+  });
+
+  document.getElementById('pwa-reload')?.addEventListener('click', () => {
+    updateSW(true);
+  });
+
+  document.getElementById('pwa-dismiss')?.addEventListener('click', () => {
+    const toast = document.getElementById('pwa-toast');
+    if (toast) toast.classList.add('hidden');
+  });
+</script>

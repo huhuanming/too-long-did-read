@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PWAPrompt from '../components/PWAPrompt.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -19,6 +20,10 @@ const { title, description = 'Bilingual summaries of Anthropic blog posts' } = A
     <meta name="description" content={description} />
     <title>{title} | too long; did read</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,5 +37,6 @@ const { title, description = 'Bilingual summaries of Anthropic blog posts' } = A
       <slot />
     </main>
     <Footer />
+    <PWAPrompt />
   </body>
 </html>

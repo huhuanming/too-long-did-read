@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://too-long-did-read.vercel.app/sitemap-index.xml
