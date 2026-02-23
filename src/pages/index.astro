@@ -31,3 +31,41 @@ const posts = (await getCollection('posts')).sort(
     }
   </div>
 </BaseLayout>
+
+<script>
+  function initCardShare() {
+    document.querySelectorAll('.share-card-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const el = e.currentTarget as HTMLButtonElement;
+        const url = new URL(el.dataset.url!, window.location.origin).href;
+        const title = el.dataset.title || '';
+
+        if (navigator.share) {
+          try { await navigator.share({ title, url }); } catch (_) {}
+          return;
+        }
+
+        try {
+          await navigator.clipboard.writeText(url);
+        } catch (_) {
+          const input = Object.assign(document.createElement('input'), { value: url });
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+
+        // Brief visual feedback
+        const svg = el.querySelector('svg')!;
+        el.classList.add('text-violet-400');
+        setTimeout(() => el.classList.remove('text-violet-400'), 1500);
+      });
+    });
+  }
+
+  initCardShare();
+  document.addEventListener('astro:after-swap', initCardShare);
+</script>

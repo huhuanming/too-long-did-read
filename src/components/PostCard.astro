@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { titleEn, titleZh, date, slug } = Astro.props;
+const postUrl = `/posts/${slug}`;
 
 const formattedDate = date.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -15,8 +16,8 @@ const formattedDate = date.toLocaleDateString('en-US', {
 });
 ---
 
-<article class="group">
-  <a href={`/posts/${slug}`} class="block p-4 -mx-4 rounded-xl glow-border transition-all">
+<article class="group relative">
+  <a href={postUrl} class="block p-4 -mx-4 rounded-xl glow-border transition-all">
     <div class="flex items-start justify-between gap-4">
       <div class="min-w-0">
         <h2 class="text-base font-medium text-zinc-100 group-hover:text-violet-300 transition-colors leading-snug truncate">
@@ -26,9 +27,21 @@ const formattedDate = date.toLocaleDateString('en-US', {
           {titleZh}
         </p>
       </div>
-      <time class="text-xs text-zinc-600 tabular-nums whitespace-nowrap pt-1">
-        {formattedDate}
-      </time>
+      <div class="flex items-center gap-2 shrink-0 pt-1">
+        <time class="text-xs text-zinc-600 tabular-nums whitespace-nowrap">
+          {formattedDate}
+        </time>
+        <button
+          class="share-card-btn text-zinc-600 hover:text-violet-400 transition-colors"
+          data-url={postUrl}
+          data-title={titleEn}
+          aria-label="Share"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v7a2 2 0 002 2h12a2 2 0 002-2v-7M16 6l-4-4-4 4M12 2v13" />
+          </svg>
+        </button>
+      </div>
     </div>
   </a>
 </article>
