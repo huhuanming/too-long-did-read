@@ -22,6 +22,8 @@ Hopefully, reading this leaves you more prepared for potential left tail risks a
 
 **This is the CitriniResearch Macro Memo from June 2028, detailing the progression and fallout of the Global Intelligence Crisis.**
 
+![Macro Memo](/images/2028gic/01-cover.jpeg)
+
 ### The Consequences of Abundant Intelligence
 
 *CitriniResearch*
@@ -148,6 +150,8 @@ Agents went looking for faster and cheaper options than cards. Most settled on u
 
 Mastercard's Q1 2027 report was the point of no return. Agentic commerce went from being a product story to a plumbing story. MA dropped 9% the following day. Visa did too, but pared losses after analysts pointed out its stronger positioning in stablecoin infrastructure.
 
+![Mastercard chart](/images/2028gic/02-mastercard.png)
+
 Agentic commerce routing around interchange posed a far greater risk to card-focused banks and mono-line issuers, who collected the majority of that 2-3% fee and had built entire business segments around rewards programs funded by the merchant subsidy.
 
 American Express (AXP US) was hit hardest; a combined headwind from white-collar workforce reductions gutting its customer base and agents routing around interchange gutting its revenue model. Synchrony (SYF US), Capital One (COF US) and Discover (DFS US) all fell more than 10% over the following weeks, as well.
@@ -170,6 +174,8 @@ AI is now a general intelligence that improves at the very tasks humans would re
 
 Today, AI agents handle many-weeks-long research and development tasks. The exponential steamrolled our conceptions of what was possible, even though every year Wharton professors tried to fit the data to a new sigmoid.
 
+![AI capability growth](/images/2028gic/03-sigmoid.png)
+
 They write essentially all code. The highest performing of them are substantially smarter than almost all humans at almost all things. And they keep getting cheaper.
 
 AI *has* created new jobs. Prompt engineers. AI safety researchers. Infrastructure technicians. Humans are still in the loop, coordinating at the highest level or directing for taste. For every new role AI created, though, it rendered dozens obsolete. The new roles paid a fraction of what the old ones did.
@@ -189,6 +195,8 @@ The bond market (always smarter than equities, or at least less romantic) began 
 In a normal recession, the cause eventually self-corrects. Overbuilding leads to a construction slowdown, which leads to lower rates, which leads to new construction. Inventory overshoot leads to destocking, which leads to restocking. The cyclical mechanism contains within it its own seeds of recovery.
 
 **This cycle's cause was not cyclical.**
+
+![The AI feedback loop](/images/2028gic/04-feedback-loop.png)
 
 AI got better and cheaper. Companies laid off workers, then used the savings to buy more AI capability, which let them lay off more workers. Displaced workers spent less. Companies that sell things to consumers sold fewer of them, weakened, and invested more in AI to protect margins. AI got better and cheaper.
 
@@ -211,6 +219,8 @@ In the US, we weren't asking about how the bubble would burst in AI infrastructu
 **Displaced white-collar workers did not sit idle.** They downshifted. Many took lower-paying service sector and gig economy jobs, which increased labor supply in those segments and compressed wages there too.
 
 A friend of ours was a senior product manager at Salesforce in 2025. Title, health insurance, 401k, $180,000 a year. She lost her job in the third round of layoffs. After six months of searching, she started driving for Uber. Her earnings dropped to $45,000. The point is less the individual story and more the second-order math. Multiply this dynamic by a few hundred thousand workers across every major metro. Overqualified labor flooding the service and gig economy pushed down wages for existing workers who were already struggling. Sector-specific disruption metastasized into economy-wide wage compression.
+
+![The displacement spiral](/images/2028gic/05-displacement.jpeg)
 
 The pool of remaining human-centric had another correction ahead of it, happening while we write this. As autonomous delivery and self-driving vehicles work their way through the gig economy that absorbed the first wave of displaced workers.
 
@@ -280,6 +290,8 @@ When Moody's put Athene's financial strength rating on negative outlook, Apollo'
 
 It only got more complex from there. These firms hadn't just created their insurer perpetual motion machine, they'd built an elaborate offshore architecture designed to maximize returns through regulatory arbitrage. The US insurer wrote the annuity, then ceded the risk to an affiliated Bermuda or Cayman reinsurer it also owned - set up to take advantage of more flexible regulation that permitted holding less capital against the same assets. That affiliate raised outside capital through offshore SPVs, a new layer of counterparties who invested alongside insurers into private credit originated by the same parent's asset management arm.
 
+![The daisy chain structure](/images/2028gic/06-daisy-chain.jpeg)
+
 The ratings agencies, some of which were themselves PE-owned, had not been paragons of transparency (surprising to virtually no one). The spider web of different firms linked to different balance sheets was stunning in its opacity. When the underlying loans defaulted, the question of who actually bore the loss was genuinely unanswerable in real time.
 
 The November 2027 crash marked the transition of perception from a potentially garden-variety cyclical drawdown to something much more uncomfortable. *"A daisy chain of correlated bets on white collar productivity growth"* was what Fed Chair Kevin Warsh called it during the FOMC's emergency November meeting.
@@ -302,6 +314,8 @@ None of these apply here. The borrowers in question are not subprime. They're 78
 
 In 2008, the loans were bad on day one. In 2028, the loans were good on day one. The world just…changed after the loans were written. People borrowed against a future they can no longer afford to believe in.
 
+![Mortgage stress indicators](/images/2028gic/07-mortgage.png)
+
 In 2027, we flagged early signs of invisible stress: HELOC draws, 401(k) withdrawals, and credit card debt spiking while mortgage payments remained current. As jobs were lost, hiring was frozen and bonuses cut, these prime households saw their debt-to-income ratios double.
 
 They could still make the mortgage payment, but only by stopping all discretionary spending, draining savings, and deferring any home maintenance or improvement. They were technically current on their mortgage, but just one more shock away from distress, and the trajectory of AI capabilities suggested that shock is coming. Then we saw delinquencies begin to spike in San Francisco, Seattle, Manhattan and Austin, even as the national average stayed within historical norms.
@@ -309,6 +323,8 @@ They could still make the mortgage payment, but only by stopping all discretiona
 We're now in the most acute stage. Falling home prices are manageable when the marginal buyer is healthy. Here, the marginal buyer is dealing with the same income impairment.
 
 While concerns are building, we are not yet in a full-blown mortgage crisis. Delinquencies have risen but remain well below 2008 levels. It is the trajectory that's the real threat.
+
+![Delinquency trajectory](/images/2028gic/08-delinquency.png)
 
 The Intelligence Displacement Spiral now has two financial accelerants to the real economy's decline.
 
@@ -324,11 +340,15 @@ What's clear is that the income assumptions underlying $13 trillion in residenti
 
 The first negative feedback loop was in the real economy: AI capability improves, payroll shrinks, spending softens, margins tighten, companies buy more capability, capability improves. Then it turned financial: income impairment hit mortgages, bank losses tightened credit, the wealth effect cracked, and the feedback loop sped up. And both of these have been exacerbated by an insufficient policy response from a government that seems, quite frankly, confused.
 
+![Policy response timeline](/images/2028gic/09-policy.png)
+
 The system wasn't designed for a crisis like this. The federal government's revenue base is essentially a tax on human time. People work, firms pay them, the government takes a cut. Individual income and payroll taxes are the spine of receipts in normal years.
 
 Through Q1 of this year, federal receipts were running 12% below CBO baseline projections. Payroll receipts are falling because fewer people are employed at prior compensation levels. Income tax receipts are falling because the incomes being earned are structurally lower. Productivity is surging, but the gains are flowing to capital and compute, not labor.
 
 Labor's share of GDP declined from 64% in 1974 to 56% in 2024, a four-decade grind lower driven by globalization, automation, and the steady erosion of worker bargaining power. In the four years since AI began its exponential improvement, that has dropped to 46%. The sharpest decline on record.
+
+![Labor's share of GDP](/images/2028gic/10-labor-share.png)
 
 The output is still there. But it's no longer routing through households on the way back to firms, which means it's no longer routing through the IRS either. The circular flow is breaking, and the government is expected to step in to fix that.
 
@@ -393,6 +413,8 @@ This is the first time in history the most productive asset in the economy has p
 希望读完这篇文章后，你能更好地应对AI使经济日益诡异时可能出现的左尾风险。
 
 **这是CitriniResearch 2028年6月的宏观备忘录，详细记录了全球智能危机的演变和影响。**
+
+![Macro Memo](/images/2028gic/01-cover.jpeg)
 
 ### 充裕智能的后果
 
@@ -520,6 +542,8 @@ DoorDash（DASH US）是典型案例。
 
 万事达卡2027年第一季度报告是不归路。智能体商务从产品故事变成了基础设施故事。MA次日下跌9%。Visa也跟跌，但在分析师指出其在稳定币基础设施方面更强的定位后收窄了跌幅。
 
+![Mastercard chart](/images/2028gic/02-mastercard.png)
+
 智能体商务绕过交换费对以卡片为中心的银行和单一发卡机构构成了更大的风险，这些机构收取了2-3%费用的大部分，并围绕由商户补贴资助的奖励计划建立了整个业务板块。
 
 美国运通（AXP US）受打击最大：白领裁员削弱了其客户群，代理绕过交换费削弱了其收入模式，两面夹击。Synchrony（SYF US）、Capital One（COF US）和Discover（DFS US）在随后几周也都下跌了10%以上。
@@ -542,6 +566,8 @@ AI现在是一种通用智能，它在人类本可以重新部署的那些任务
 
 如今，AI代理处理着长达数周的研发任务。指数级增长碾压了我们对可能性的认知，尽管每年沃顿商学院的教授们都试图将数据拟合到一条新的S型曲线上。
 
+![AI capability growth](/images/2028gic/03-sigmoid.png)
+
 它们编写了基本上所有的代码。其中表现最好的比几乎所有人类在几乎所有事情上都聪明得多。而且它们还在不断变便宜。
 
 AI*确实*创造了新工作。提示工程师。AI安全研究员。基础设施技术员。人类仍然在循环中，在最高层面进行协调或引导审美。然而，AI每创造一个新角色，就淘汰了数十个旧角色。新角色的薪酬只是旧角色的零头。
@@ -561,6 +587,8 @@ AI*确实*创造了新工作。提示工程师。AI安全研究员。基础设�
 在正常的衰退中，原因最终会自我修正。过度建设导致建筑放缓，导致利率降低，导致新的建设。库存过剩导致去库存，导致补库存。周期性机制本身就包含复苏的种子。
 
 **这个周期的原因不是周期性的。**
+
+![The AI feedback loop](/images/2028gic/04-feedback-loop.png)
 
 AI变得更好更便宜。公司裁员，然后用节省的资金购买更多AI能力，这使他们能够裁掉更多工人。被裁工人减少消费。向消费者销售产品的公司销量下降，变得更弱，于是投入更多AI以保护利润率。AI变得更好更便宜。
 
@@ -583,6 +611,8 @@ AI变得更好更便宜。公司裁员，然后用节省的资金购买更多AI�
 **被取代的白领工人并没有闲着。** 他们降级了。许多人接受了薪酬更低的服务行业和零工经济工作，这增加了这些领域的劳动力供应，进一步压缩了那里的工资。
 
 我们的一位朋友2025年在Salesforce担任高级产品经理。有头衔、有医保、有401k，年薪18万美元。她在第三轮裁员中失去了工作。找了六个月工作后，她开始开Uber。收入降至4.5万美元。重点不在于个人故事，而在于二阶数学。将这种动态乘以每个主要都市区的数十万工人。过度合格的劳动力涌入服务和零工经济，压低了已经在挣扎的现有工人的工资。特定行业的颠覆转移为全经济范围的工资压缩。
+
+![The displacement spiral](/images/2028gic/05-displacement.jpeg)
 
 剩余的以人类为中心的就业池还有另一次修正在前方，就在我们写这篇文章的时候。自动配送和自动驾驶车辆正在渗透进吸收了第一波被取代工人的零工经济。
 
@@ -652,6 +682,8 @@ AI代理已经自主处理客户服务近一年了。Zendesk所定义的类别�
 
 接下来的情况只会更加复杂。这些公司不仅创建了它们的保险公司永动机，还建立了一个精心设计的离岸架构，旨在通过监管套利来最大化回报。美国保险公司签下年金，然后将风险让渡给它同样拥有的百慕大或开曼群岛关联再保险公司——设立该公司是为了利用更灵活的监管，允许对同样的资产持有更少的资本。该关联公司通过离岸SPV筹集外部资本，形成了一层新的交易对手，他们与保险公司一起投资于同一母公司的资管部门发起的私募信贷。
 
+![The daisy chain structure](/images/2028gic/06-daisy-chain.jpeg)
+
 评级机构——其中一些本身是PE所有的——在透明度方面并非楷模（这对几乎所有人来说都不意外）。不同公司关联到不同资产负债表的蜘蛛网在不透明性方面令人震惊。当底层贷款违约时，谁实际上承担了损失这个问题在实时中是真正无法回答的。
 
 2027年11月的崩盘标志着认知从可能的普通周期性回调转变为更加令人不安的东西。*"一条白领生产力增长的关联押注菊花链"*——这是美联储主席Kevin Warsh在FOMC11月紧急会议上的说法。
@@ -674,6 +706,8 @@ AI代理已经自主处理客户服务近一年了。Zendesk所定义的类别�
 
 2008年，贷款在发放第一天就是坏的。2028年，贷款在发放第一天是好的。只是世界在贷款签订后……改变了。人们借的是他们再也无法相信的未来。
 
+![Mortgage stress indicators](/images/2028gic/07-mortgage.png)
+
 2027年，我们标记了隐形压力的早期迹象：HELOC（房屋净值信贷额度）提取、401(k)取款和信用卡债务飙升，而抵押贷款还款仍然正常。随着失业、招聘冻结和奖金削减，这些优质家庭的债务收入比翻倍。
 
 他们仍然可以支付抵押贷款，但只能通过停止所有可选消费、耗尽储蓄和推迟任何房屋维护或改善。他们在技术上没有逾期，但距离困境只差一次冲击，而AI能力的发展轨迹表明这一冲击即将到来。然后我们看到旧金山、西雅图、曼哈顿和奥斯汀的逾期率开始飙升，尽管全国平均水平仍在历史正常范围内。
@@ -681,6 +715,8 @@ AI代理已经自主处理客户服务近一年了。Zendesk所定义的类别�
 我们现在处于最严峻的阶段。当边际买家健康时，房价下跌是可管理的。这里，边际买家面临着同样的收入损害。
 
 虽然担忧在积累，但我们还没有陷入全面的抵押贷款危机。逾期率有所上升，但仍远低于2008年的水平。真正的威胁是趋势。
+
+![Delinquency trajectory](/images/2028gic/08-delinquency.png)
 
 智能替代螺旋现在有两个金融加速器推动实体经济的衰退。
 
@@ -696,11 +732,15 @@ AI代理已经自主处理客户服务近一年了。Zendesk所定义的类别�
 
 第一个负反馈循环在实体经济中：AI能力提升，工资支出缩减，消费疲软，利润收紧，公司购买更多能力，能力提升。然后它转变为金融问题：收入损害冲击了抵押贷款，银行损失收紧了信贷，财富效应崩裂，反馈循环加速。而这两者都因政府不充分的政策应对而加剧——坦率地说，政府显得很困惑。
 
+![Policy response timeline](/images/2028gic/09-policy.png)
+
 这个系统不是为这样的危机设计的。联邦政府的收入基础本质上是对人类时间的征税。人们工作，企业支付他们工资，政府抽取一部分。个人所得税和工资税是正常年份收入的脊梁。
 
 截至今年第一季度，联邦收入比CBO基线预测低12%。工资税收入在下降，因为更少的人以之前的薪酬水平就业。所得税收入在下降，因为正在赚取的收入在结构上更低。生产率在飙升，但收益流向了资本和算力，而非劳动力。
 
 劳动力在GDP中的份额从1974年的64%下降到2024年的56%，四十年的渐进下滑由全球化、自动化和工人议价能力的持续侵蚀所驱动。在AI开始指数级改进后的四年里，这一比例降至46%。有记录以来的最剧烈下降。
+
+![Labor's share of GDP](/images/2028gic/10-labor-share.png)
 
 产出仍然在那里。但它不再通过家庭流回企业，这意味着它也不再通过国税局流通。循环流正在断裂，而政府被期望介入修复。
 
