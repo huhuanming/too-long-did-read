@@ -38,5 +38,48 @@ const { title, description = 'AI articles & insights, curated and translated int
     </main>
     <Footer />
     <PWAPrompt />
+
+    <!-- Image lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm cursor-zoom-out p-4">
+      <img id="lightbox-img" class="max-w-full max-h-full object-contain" alt="" />
+    </div>
+
+    <script>
+      function initLightbox() {
+        const lightbox = document.getElementById('lightbox')!;
+        const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+
+        // Click any prose image to open lightbox
+        document.querySelectorAll('.prose img, #article-content img').forEach(img => {
+          (img as HTMLElement).style.cursor = 'zoom-in';
+          img.addEventListener('click', (e) => {
+            e.preventDefault();
+            lightboxImg.src = (img as HTMLImageElement).src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+          });
+        });
+
+        // Click lightbox to close
+        lightbox.addEventListener('click', () => {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          lightboxImg.src = '';
+        });
+
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.src = '';
+          }
+        });
+      }
+
+      initLightbox();
+      document.addEventListener('astro:after-swap', initLightbox);
+      document.addEventListener('content-split-done', initLightbox);
+    </script>
   </body>
 </html>

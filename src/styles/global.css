@@ -6,6 +6,7 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    touch-action: manipulation;
   }
 
   body {
