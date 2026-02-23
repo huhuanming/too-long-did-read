@@ -15,7 +15,7 @@ export default defineConfig({
       manifest: {
         name: 'too long; did read',
         short_name: 'tl;dr',
-        description: 'Anthropic blog posts, summarized and translated into Chinese',
+        description: 'AI articles & insights, curated and translated into Chinese',
         theme_color: '#09090b',
         background_color: '#09090b',
         display: 'standalone',
